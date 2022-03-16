@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/0fc9ece0af.js" crossorigin="anonymous"></script>
+    <title>Projeto Final</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="wrapper flex">
+            <a href="../index.html"><img class="logo animate_logo" src="../img/logos/logo.png" alt="Logo de um bolo amarelo à direita do nome da confeitaria e doceria Doce gosto"></a>
+            <div id="nav_bar" class="animate_header">
+                <nav id="links">
+                    <a href="../index.html">Bolos</a>
+                    <hr>
+                    <a href="./sobremesas.html">Sobremesas</a>
+                    <hr>
+                    <a href="../index.html">Tortas</a>
+                    <hr>
+                    <a href="./docinhos.html">Docinhos</a>
+                    <hr>
+                    <a href="../paginas/confeitaria.html">Confeitaria</a>
+                </nav>
+            </div>
+            <div id="botao_busca" class="animate_header">
+                <button type="button" id="botao_enviar" onclick="botaoBuscar()">Enviar</button>
+                <input type="text" placeholder="Escreva o que procura" id="caixa_texto">
+            </div>
+        </div>
+
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu__box">
+                <li><a class="menu__item" href="../index.html">Bolos</a></li>
+                <li><a class="menu__item" href="./sobremesas.html">Sobremesas</a></li>
+                <li><a class="menu__item" href="../index.html">Tortas</a></li>
+                <li><a class="menu__item" href="./docinhos.html">Docinhos</a></li>
+                <li><a class="menu__item" href="./confeitaria.html">Confeitaria</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class=" wrapper flex">
+            <h2 class="titulos_secao wrapper animate_titulo_produtos">Sobremesas</h2>
+            <div class="conjunto_produtos animate_produtos">
+                <img src="../img/sobremesas/palha_framboesa.png" alt="Imagem de cinco palhas italianas em coluna">
+                <h4 class="titulo_produtos">Palha italiana de framboesa (R$6,00)</h4>
+                <p class="descricao_produtos">Palha italiana feita com creme de  framboesa e açucar</p>
+                <button type="button" class="botao_produtos" onclick="mudarBotao(this)">Comprar</button>
+            </div>
+            <div class="conjunto_produtos animate_produtos">
+                <img src="../img/sobremesas/browne_floresta_negra.png" alt="Foto de varios brownies de floresta negra">
+                <h4 class="titulo_produtos">Brownie floresta negra (R$8,00)</h4>
+                <p class="descricao_produtos">Brownies feitos com massa de chocolate belga com frutas vermelhas</p>
+                <button type="button" class="botao_produtos" onclick="mudarBotao(this)">Comprar</button>
+            </div>
+            <div class="conjunto_produtos animate_produtos">
+                <img src="../img/sobremesas/folheado_limao.png" alt="Imagem de um folheado de limão">
+                <h4 class="titulo_produtos">Folheado de limão (17,00)</h4>
+                <p class="descricao_produtos">Massa mil folhas com creme de limão sissíliano e mel </p>
+                <button type="button" class="botao_produtos" onclick="mudarBotao(this)">Comprar</button>
+            </div>
+            <div class="conjunto_produtos animate_produtos">
+                <img src="../img/sobremesas/caramel_cream.png" alt="Uma foto de um sorvete de creme em cima de um browne de chocolate coberto com calda de caramelo">
+                <h4 class="titulo_produtos">Caramel cream(Novo!) (R$8,50)</h4>
+                <p class="descricao_produtos">Brownie feito com recheio de chocolate belga e sorvete de creme com calda de caramelo</p>
+                <button type="button" class="botao_produtos" onclick="mudarBotao(this)">Comprar</button>
+            </div>
+        </section>
+    </main>
+    <section id="secao_final">
+        <div class="wrapper_footer items_rodape">
+            <div class=" elementos">
+                <div>
+                    <a href="../index.html"> <img class="logo animate_footer_logo" src="../img/logos/logo.png" alt="Logo de um bolo amarelo à direita do nome da confeitaria e doceria Doce gosto"></a>
+                    <p id="texto_descricao" class="animate_footer">Nossa confeitaria e doceria faz doces de alta qualidade para a sua satisfação, e estamos melhorando para te alegrar. Buscamos servir o melhor para quem merece ainda mais.</p>
+                </div>
+                <div class="info animate_footer">
+                    <h4 class="disponivel">Horário de funcionamento</h4>
+                    <p class="texto_disponivel" >Segunda a sexta, das 08H as 18h. <br> Fins de semana, das 10h ass 14h.
+                    </p>
+                </div>
+            </div>
+            <div id="produtos" class=" elementos animate_footer">
+                <div>
+                    <h3 id="titulo_rodape">Produtos</h3>
+                    <ul>
+                        <!--para alterar todas as linhas simultaneamente use "ctrl + alt + shift + a seta com direção de ondequer mudar"-->
+                        <a href="../index.html"> <li><span class="li_rodape">Tortas</span></li> </a>
+                        <a href="confeitaria.html"> <li><span class="li_rodape">Utensílios</span></li> </a>
+                        <a href="./sobremesas.html"> <li><span class="li_rodape">Sobremesas</span></li> </a>
+                        <a href="./festivos.html"> <li><span class="li_rodape">Festivos</span></li> </a>
+                    </ul>
+                </div>
+                <div class="info">
+                    <h4 class="disponivel">Endereço</h4>
+                    <p class="texto_disponivel">Rua Triboia de cachatessimba, nº8 - Pq. Domante <br> CEP: 869475-836</p>
+                </div>
+            </div>
+            <div class="elementos elementos_contato animate_footer">
+                <div id="contato">
+                    <h4 id="entre_contato">Entre em contato</h4>
+                    <div class="contato">
+                        <i class="fas fa-phone"></i>
+                        <p class="numero">(11)1558-6648</p>
+                    </div>
+                    <div class="contato">
+                        <i class="fab fa-whatsapp"></i>
+                        <p class="numero">(11)97562-6457</p>
+                    </div>
+                </div>
+                <div id="redes_sociais">
+                    <h3 id="siganos">Siga nos</h3>
+                    <div id="icones_redes">
+                        <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"target="_blank"><i class="fab fa-twitter siganos_icone" id="twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="../img/logos/insta.png" alt="logo do instagram" id="insta"></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook siganos_icone" id="face"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>&copy; Todos os direitos reservados</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script> <!---O scrollTrigger serve para dizer que essa animação só vai ocorrer quando você scrollar a tela até as imagens-->
+    <script src="../script.js"></script>
+</body>
+
+</html>

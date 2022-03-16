@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Sansita+Swashed&family=Sansita:ital@1&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px 0;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* inicio do Hamburguer */
+.hamburguer-menu{
+    display: none;
+}
+#menu__toggle {
+    opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+}
+.menu__btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2; /*Serve como um tipo de camada. Se ele ocupa duas camadas (pense que elas saem da tela) ele fica na frente de tudo, se ele não tem, tem coisa que vai ficar na frente dele*/
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+.menu__box {
+    z-index: 1;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+/*Fim hamburguer*/
+/*Inicio do header*/
+
+header{
+    background-color: #F0BCAA;
+}
+
+.logo{
+    mix-blend-mode: darken;
+
+}
+
+hr{
+    border:1px solid #D37387;
+}
+
+#links{
+    color: #A36753;
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+}
+
+#botao_enviar{
+    background-color: #A36753;
+    color: #F5F5F5;
+    width: 69px;
+    height: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#caixa_texto{
+    border-radius:0 4px 4px 0;
+    border: none;
+    width: 216px;
+    text-align: center;
+}
+
+#botao_busca{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*Fim Header*/
+/*Inicio da Main*/
+
+main{
+    background-color:  #F7FBDB;
+}
+
+#barra_cima_banner{
+    background-color: #AAEFDF;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#img_banner{
+    width: 30%;
+    height: 100%;
+}
+
+#secao1{
+    background-color: #010204;
+    width: 90%;
+}
+
+.flex_banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#titulo_novidade{
+    font-family: 'Sansita', sans-serif;
+    color: #EBEBEB;
+    font-size: 48px;
+    width: 429px;
+    height: 134px;
+    margin-bottom: 37px;
+}
+
+#titulo_caramel{
+    font-family: 'Sansita', sans-serif;
+    color: #EBEBEB;
+    font-size: 65px;
+    width: 562px;
+    height: 76.76px;
+}
+
+#titulo_fim_banner{
+    font-family: 'Sansita Swashed', cursive;
+    color: #EBEBEB;
+    font-weight: 200;
+    font-size: 40px;
+    width: 450px;
+    height: 58px;
+    text-align: center;
+}
+
+#titulo_fim_secao1{
+    display: flex;
+    align-items: center;
+    width: 598px;
+    height: 56px;
+    background-color: #AAEFDF;
+    color: #A36753;
+    font-size: 25px;
+    font-family: 'Sansita', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 28px;
+    border-radius: 12px;
+}
+
+/*Fim Secao1*/
+/* Inicio secao2 (bolos) */
+
+.titulos_secao{
+    font-family: 'Sansita', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 10px;
+    /* margin-left: 180px; */
+}
+
+.conjunto_produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 580px;
+}
+
+.conjunto_produtos > img{
+    width: 250px;
+    height: 352px;
+    border-radius: 30px;
+}
+
+.titulo_produtos{
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    margin: 32px auto 16px;
+    font-size: 20px;
+    text-align: center;
+    width: 250px;
+}
+
+.descricao_produtos{
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    width: 186px;
+    height: 68px;
+    text-align: center;
+}
+
+.botao_produtos{
+    background-color: transparent;
+    border: 1px solid #AB364D;
+    color: #AB364D;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    border-radius: 9px;
+    text-align: center;
+    padding: 5px;
+}
+
+.botao_produtos2{
+    background-color: #AB364D;
+    border: 1px solid #000;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    border-radius: 9px;
+    text-align: center;
+    padding: 5px;
+}
+
+.botao_produtos2:hover{
+    border: 1px solid #da1a41;
+    color: #fff;
+    transform: scale(1.05);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao_produtos:hover{
+    border: 1px solid #da1a41;
+    transform: scale(1.05);
+    color: #da1a41;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Iniciar outras opções*/
+#secao_cards{
+    width: 100%;
+}
+
+.posicao{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+#titulo_encontrar_opcoes{
+    font-family: 'Sansita', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    width: 330px;
+    height: 82px;
+}
+.cards{
+    width: 233px;
+    height: 352px;
+    border-radius: 30px;
+    transition: transform .2s; /* Animation */
+}
+.cards:hover{
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#img_festivos{
+    background:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.45)), url("./img/festivos/bolo_murango.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+#img_docinhos{
+    background:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.45)), url("./img/docinhos/tortinha_morango.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#img_sobremesas{
+    background:linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.45)), url("./img/sobremesas/pave_floresta_negra.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.titulo_outros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    height: 100%;
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*Fim seção opções*/
+/*Inicio ultima seção*/
+
+#secao_final{
+    background-color: #F0BCAAD4;
+    width: 100%;
+
+}
+
+#texto_descricao{
+    width: 300px;
+    height: 115px;
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+#titulo_rodape{
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+li{
+    font-family: 'Sansita', sans-serif;
+    font-size: 24px;
+    color: #AAEFDF;
+}
+
+.lista_final{
+    width: fit-content;
+}
+
+.li_rodape{
+    color: #000;
+}
+
+#entre_contato{
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contato{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 226px;
+    height: 45px;
+}
+
+.contato > i{
+    font-size: 32px;
+}
+
+
+
+.numero{
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 24px;
+}
+
+.disponivel{
+    font-family: 'Sansita', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.texto_disponivel{
+    font-family: 'Sansita Swashed', cursive;
+    font-size: 18px;
+}
+
+#siganos{
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    width: 200px;
+}
+
+.siganos_icone{
+    font-size: 32px;
+    padding:0 12px;
+}
+
+#twitter{
+    color: #1DA1F2;   
+}
+
+#insta{  
+    width: 32px;
+    height: 32px;
+    margin-top: 2px;
+}
+
+#face{
+    color: #45619D;
+}
+
+.flex-footer{
+    justify-content: space-between;
+}
+
+.items_rodape{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.elementos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    width: 30%;
+}
+
+.elementos_contato{
+    align-items: flex-end;
+}
+
+#contato{
+    text-align: start;
+}
+
+.wrapper_footer{
+    margin: 0 auto;
+    width:85%;
+    padding: 20px 0;
+}
+
+#redes_sociais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#icones_redes{
+    display: flex;
+    align-items: center;
+    margin-top:10px;
+}
+
+footer{
+    padding-top: 10px;
+    background-color: #F0BCAAD4;
+    text-align: center;
+    font-family: 'Sansita', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* fim do site */
+/* começo de responsividade */
+
+/*1° width- 1300px */
+@media screen and (max-width: 1300px) {
+    #botao_busca{
+        display: none;
+    }
+}
+
+/* 2° width - 1225px */
+@media screen and (max-width: 1225px) {
+    #titulo_novidade{
+        font-size: 32px;
+        width: 310px;
+        margin-bottom: 0;
+    }
+    #titulo_caramel{
+        font-size: 50px;
+        width: 440px;
+    }
+    #titulo_fim_banner{
+        font-size: 24px;
+        width: 325px;
+    }
+}
+
+/*3° width - 1200px*/
+@media screen and (max-width: 1200px) {
+    .cards{
+        width: 200px;
+        height: 320px;
+    }
+}
+
+/* 4° width - 1145px */
+@media screen and (max-width: 1145px) {
+    .conjunto_produtos{
+        width: 400px;
+        justify-content: space-evenly;
+    }
+    .elementos{
+        width: 20%;
+    }
+}
+
+/* 5° width - 1050px */
+@media screen and (max-width: 1050px) {
+    .cards{
+        width: 150px;
+        height: 280px;
+    } 
+}
+
+/* 6° width - 985px */
+@media screen and (max-width: 985px) {
+    #nav_bar{
+        display: none   ;
+    }
+    .hamburguer-menu{
+        display: flex;
+    }
+    .menu__btn{
+        display: flex;
+    }
+    .elementos{
+        width: 10%;
+        height: 215px;
+    }
+    .info{
+        display: none;
+    }
+    footer{
+        padding-top: 0;
+    }
+}
